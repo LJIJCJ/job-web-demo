@@ -15,7 +15,7 @@ jobs:
       run: |
         pip install Faker
     - name: make all 
-      run: ./autorun.sh  
+      run: sudo ./autorun.sh  
     - name: Create Release
       uses: JasonEtco/upload-to-release@master
       with:
