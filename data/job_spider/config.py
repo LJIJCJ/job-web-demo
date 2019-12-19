@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 MYSQL_URL = 'mysql+mysqldb://root@localhost:3306/job_web?charset=utf8'
+SQLITE_URL = 'sqlite:///../job_web/jobs'
 
 # 去重所用的Redis
 HOST = 'localhost'

@@ -76,8 +76,9 @@ class WriterProcess(Process):
                 company.email = fake_en.email()
                 # company.phone = random.randint(13000000000, 18999999999)
                 company.password = '123456'
+                print(company)
                 sql.add_commit(company)
-                company_id = sql.get_company_id(result['name'])
+                company_id = sql.get_company_id(result['n                                                                                                                                                                                                               ame'])
 
             elif result.get('type') == 'job':
                 logger.debug(result)

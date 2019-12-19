@@ -5,7 +5,7 @@ import logging
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.exc import NoResultFound
-from .config import MYSQL_URL, HOST, PORT, KEY_NAME
+from .config import SQLITE_URL, HOST, PORT, KEY_NAME
 import sys
 sys.path.append('..')
 from job_web.models import Company
@@ -14,7 +14,7 @@ from job_web.models import Company
 class SqlOperator(object):
 
     def __init__(self):
-        engine = create_engine(MYSQL_URL)
+        engine = create_engine(SQLITE_URL)
         db_session = sessionmaker(bind=engine)
         self.session = db_session()
         self.logger = logging.getLogger('root')

@@ -48,11 +48,11 @@
                                     <option value='company'>企业</option>
                                 </select>
                                 <script>
-                                {% if 'company' in request.url %}
+                                if ('company' in request.url){
                                     $("#type").val('company');
-                                {% else %}
+                                }
+                                else
                                     $("#type").val('job');
-                                {% endif %}
                                 </script>
                             </div>
                             <input type="text" class="form-control" name="kw" id="kw"
